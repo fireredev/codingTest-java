@@ -8,13 +8,9 @@ class Solution {
                     .replace("woo"," ")
                 .replace("ma"," ");
         }
-        
-        
         for(int i=0;i<babbling.length;i++){
-            babbling[i].trim();
             if(babbling[i].isBlank()) answer++;
         }
-        System.out.println(Arrays.toString(babbling));
         return answer;
     }
 }
