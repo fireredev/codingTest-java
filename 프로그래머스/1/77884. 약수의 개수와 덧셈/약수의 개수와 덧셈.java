@@ -8,12 +8,10 @@ class Solution {
         return plus-minus;
     }
     public int per(int n){
-        List<Integer> li = new ArrayList<>();
+        int cnt=0;
         for(int i=1;i<=n;i++){
-            if(n % i ==0){
-                li.add(i);
-            }
+            if(n % i ==0) cnt++;
         }
-        return li.size();
+        return cnt;
     }
 }
