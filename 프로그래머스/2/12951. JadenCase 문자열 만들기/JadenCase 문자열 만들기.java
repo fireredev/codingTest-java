@@ -8,7 +8,7 @@ class Solution {
         
         for (int i = 0; i < arr.length; i++) {
             String w = arr[i];
-            if (!w.isEmpty()) {
+            if (!w.isBlank()) {
                 String str = w.substring(0, 1).toUpperCase() + w.substring(1);
                 answer.append(str);
             }
