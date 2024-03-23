@@ -4,7 +4,7 @@ class Solution {
         int length =0;
         int cnt = 0;
         int lencnt = 0;
-        while(true){
+        while(!s.equals("1")){
             for(char c : s.toCharArray()){
                 if(c == '0') {
                     length++;
@@ -14,7 +14,7 @@ class Solution {
             lencnt +=length;
             length=0;
             cnt++;
-            if(s.equals("1")) break;
+            
         }
             answer[0]=cnt;
             answer[1]=lencnt;
