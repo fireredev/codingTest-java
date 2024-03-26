@@ -3,14 +3,10 @@ import java.util.*;
 class Solution {
     public int solution(int n) {
         int answer = 0;
-
-        for(int i=0;i<n;i++){
-            while(i % 3 ==0 || Integer.toString(i).contains("3")){
-                i++;
-                n++;    
-            }
-            answer= i;
-        }
-        return answer;
+        int[] answer1 = IntStream.iterate(0, i -> i + 1) 
+                .filter(i -> i % 3 != 0 && !Integer.toString(i).contains("3")) 
+                .limit(n) 
+                .toArray();
+        return answer1[answer1.length-1];
     }
 }
