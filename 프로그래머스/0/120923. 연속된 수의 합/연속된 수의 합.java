@@ -12,7 +12,7 @@ class Solution {
                 answer[i] = d++;
             }
             return answer;
-        }else{
+          }else{
             for(int i=0;i<num;i++){
                 answer[i] = c++;
             }
