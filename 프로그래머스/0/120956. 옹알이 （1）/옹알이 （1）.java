@@ -10,7 +10,6 @@ class Solution {
                        .replace("ma"," ");
             if(babbling[i].isBlank()) answer++;
         }
-        
         return answer;
     }
 }
