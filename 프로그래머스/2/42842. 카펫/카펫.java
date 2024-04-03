@@ -8,8 +8,6 @@ class Solution {
             if(sum % i ==0 && i>= sum / i && sum / i >= 3) 
                 li.add(new int[]{i,sum / i}); 
         }
-        if(li.size()==1) return li.get(0);
-        
         for(int i=0;i<li.size();i++){
             if((li.get(i)[0] - 2) * (li.get(i)[1] - 2) == yellow) return li.get(i);
         }
