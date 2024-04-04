@@ -8,9 +8,8 @@ class Solution {
                 s.add(numbers[i]+numbers[j]);
             }
         }
-        List<Integer> li = new ArrayList<>(s);
-        Collections.sort(li);
         
-        return li.stream().mapToInt(Integer::intValue).toArray();
+        
+        return s.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
 }
