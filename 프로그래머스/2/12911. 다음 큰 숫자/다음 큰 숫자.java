@@ -14,7 +14,7 @@ class Solution {
     }
     
     //2진수로 변환했을 때 1의 개수
-	private static int toBinary(int n) {
+	private int toBinary(int n) {
 		int one = 1;
 		
 		while(n > 1) {
