@@ -2,28 +2,13 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         
-        int curOne = toBinary(n);
-		
-		while(true) {
-			int nextOne = toBinary(++n);
-			if(curOne == nextOne) break;
-		}
-		answer = n;
+        int nCnt = Integer.bitCount(n);
+        int taget = n+1;
+        while(nCnt != Integer.bitCount(taget)){
+            taget++;
+        }
         
-        return answer;
+        
+        return taget;
     }
-    
-    //2진수로 변환했을 때 1의 개수
-	private int toBinary(int n) {
-		int one = 1;
-		
-		while(n > 1) {
-			if(n % 2 == 1) {
-				one++;
-			}
-			n /= 2;
-		}
-		
-		return one;
-	}
 }
