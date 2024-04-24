@@ -15,14 +15,13 @@ class Solution {
         
         int answer = 1;
         
-        for(int i=0;i<li.size();i++){
-            k=k-li.get(i);
-            if(k<=0) return answer;
+        for(int i:li){
+            k-=i;
+            if(k<=0) break;
             answer++;
         }
-        
   
-        return k;
+        return answer;
     }
    
 }
