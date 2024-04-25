@@ -3,24 +3,24 @@ import java.util.stream.*;
 import java.util.function.Function;
 class Solution {
     public int solution(int k, int[] tangerine) {
-        List<Integer> li = Arrays.stream(tangerine)
-                .boxed()
-                .collect(Collectors.groupingBy(Function.identity(),
-                                               Collectors.counting()))
-                .values()
-                .stream()
-                .sorted(Comparator.reverseOrder())
-                .map(Long::intValue)
-                .collect(Collectors.toList());
-        
-        int answer = 1;
-        
-        for(int i:li){
-            k-=i;
-            if(k<=0) break;
-            answer++;
+        int answer = 0;
+        HashMap<Integer,Integer> map =new HashMap<>();
+
+        for (int t : tangerine) {
+            map.put(t, map.getOrDefault(t, 0) + 1);
         }
-  
+
+        List<Integer> list = new ArrayList<>(map.keySet());
+        list.sort((o1, o2) -> map.get(o2)-map.get(o1));
+
+        for(Integer key:list){
+            k -=map.get(key);
+            answer++;
+            if(k<=0){
+                break;
+            }
+        }
+
         return answer;
     }
    
