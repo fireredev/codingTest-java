@@ -6,9 +6,9 @@ class Solution {
         for(String s: goal){
              if(idx1 < cards1.length && s.equals(cards1[idx1])) idx1++;
              else if(idx2 < cards2.length && s.equals(cards2[idx2])) idx2++;
-             else found =false;
+             else return "No";
         }
 
-        return found ? "Yes":"No";
+        return "Yes";
     }
 }
