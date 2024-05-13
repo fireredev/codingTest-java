@@ -1,19 +1,11 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
 
 class Solution {
     public int[] solution(int[] arr, int[] delete_list) {
-        Set<Integer> deleteSet = new HashSet<>();
-        for(int d : delete_list){
-            deleteSet.add(d);
-        }
-
-        List<Integer> answer = new ArrayList<>();
-        for (int a : arr) {
-            if (!deleteSet.contains(a)) {
-                answer.add(a);
-            }
-        }
-
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        HashSet<Integer> delete = new HashSet<>();
+        for (int del : delete_list)
+            delete.add(del);
+        return Arrays.stream(arr).filter(i -> !delete.contains(i)).toArray();
     }
 }
