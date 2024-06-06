@@ -10,6 +10,6 @@ class Solution {
                 odd+=Integer.toString(num_list[i]);
             }
         }
-        return Integer.parseInt(even)+Integer.parseInt(odd);
+          return Integer.parseInt(even)+Integer.parseInt(odd);
     }
 }
