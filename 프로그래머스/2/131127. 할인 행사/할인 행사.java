@@ -8,16 +8,16 @@ class Solution {
             basket.put(want[i],number[i]);
         }
         
-        for(int i = 0; i <= discount.length - 10; i++){
+        for(int i=0;i<=discount.length-10;i++){
             Map<String,Integer>cb = new HashMap<>(basket);
-            for(int j = i; j < i + 10; j++){
+            for(int j=i;j<i+10;j++){
                 if(cb.containsKey(discount[j])){
                     cb.put(discount[j],cb.get(discount[j])-1);
                 }
             }
             boolean empty=true;
             for(int count:cb.values()){
-                if(count>0){
+                if(count!=0){
                     empty=false;
                     break;
                 }
