@@ -8,6 +8,6 @@ class Solution {
             if(c=='d') answer=answer+10;
             if(c=='a') answer=answer-10;
         }
-        return answer;
+            return answer;
     }
 }
