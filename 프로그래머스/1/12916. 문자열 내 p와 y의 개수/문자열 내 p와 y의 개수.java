@@ -9,7 +9,7 @@ class Solution {
              else if(s.charAt(i)=='y')cnt--;
         }
         
-        if(cnt!=0) answer=false;
+            if(cnt!=0) answer=false;
 
         return answer;
     }
