@@ -16,17 +16,13 @@ class Solution {
                     }
                 }
                 idx+=cnt;
-                if(cnt==101) {
-                    word=false; 
-                    break;
-                }
+                if(cnt==101) word=false; 
             }
             if(word){
                 answer[i]=idx;    
             }else{
                 answer[i]=-1;
             }
-            
         }
         return answer;
     }
